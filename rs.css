@@ -1,0 +1,167 @@
+body {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: white;
+  transition: ease .3s;
+}
+
+h1 {
+  font-size: 4cqmax;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 1vh;
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 25rem;
+}
+
+.grid-item {
+  display: flex;
+}
+
+.g1 img {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  /* Detta betyder att den inte streachas oönskat */
+  border-radius: 20px;
+  margin: 20px 0px 10px 0px;
+
+}
+
+.g1,
+.g2 {
+  grid-column: span 2;
+}
+
+.g2 {
+  background-color: rgb(117, 140, 159);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10% 10% 10%;
+  line-height: 25px;
+  border-radius: 10px;
+}
+
+.g3 {
+  display: grid;
+  grid-template-columns: 6fr;
+  background-color: rgb(65, 79, 92);
+  height: 15rem;
+  padding-top: 7%;
+}
+
+.g3 p {
+  grid-row: span 3;
+  line-height: 25px;
+  margin: 0px 15px;
+}
+
+
+
+
+
+
+
+@media (min-width: 667px) {
+
+
+
+  body {
+    background-color: rgb(2, 2, 2);
+    text-align: center;
+    color: white;
+    transition: ease .3s;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .grid-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 10vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 25rem;
+  }
+
+  .grid-item {
+    display: flex;
+  }
+
+  .g1 img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    /* Detta betyder att den inte streachas oönskat */
+    border-radius: 20px;
+    margin: 20px 0px 10px 0px;
+
+  }
+
+
+  .g1 {
+    grid-column: span 1;
+    /* Takes 1 fraction in width */
+    grid-row: span 2;
+    /* Takes 2 rows in height */
+  }
+
+  .g2 {
+    grid-column: span 3;
+    /* Takes 3 fractions in width */
+    grid-row: span 2;
+    /* Takes 2 rows in height */
+    background-color: rgb(26, 17, 46);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10% 10% 10%;
+    line-height: 25px;
+    border-radius: 10px;
+  }
+
+  .g3 {
+    display: grid;
+    grid-template-columns: 6fr;
+    background-color: rgb(52, 43, 70);
+    height: 15rem;
+    padding-top: 7%;
+
+  }
+
+  .g3 p {
+    grid-row: span 3;
+    line-height: 25px;
+    margin: 0px 15px;
+  }
+
+
+}
+
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+
+  .g1 {
+    grid-column: span 4;
+    /* Takes 1 fraction in width */
+    grid-row: span 2;
+    /* Takes 2 rows in height */
+  }
+
+  .g2 {
+    grid-column: span 4;
+    /* Takes 1 fraction in width */
+    grid-row: span 2;
+    /* Takes 2 rows in height */
+  }
+
+}
